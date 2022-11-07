@@ -34,13 +34,22 @@
     font-style: normal;
     font-weight: 400;
     font-size: 17px;
+    line-height: 10px;
 }
 
 .add-to-cart {
     background-color: rgba(255, 153, 0, 0.3);
     width: 100%;
     border: none;
+    border-top: 1px solid #95A0A7;
     border-radius: 0 0 8px 8px;
     position: absolute;
     bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-to-cart p{
+    margin-right: 10px;
 }
