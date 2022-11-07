@@ -10,8 +10,8 @@ console.log(product);
             <div className="product-info">
                 <p className='product-name'>{name}</p>
                 <p className='product-price'>Price: ${price}</p>
-                <p><small>Manufacturer: {seller}</small></p>
-                <p><small>Rating: {ratings} stars</small></p>
+                <p className='small-text'><small>Manufacturer: {seller}</small></p>
+                <p className='small-text'><small>Rating: {ratings} stars</small></p>
             </div>
             <button className='add-to-cart'>
                 <p>Add to Cart</p>

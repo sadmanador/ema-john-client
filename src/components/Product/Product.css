@@ -10,7 +10,16 @@
     height: 286px;
     width: 286px;
     border-radius: 8px;
-    margin: 10px 7px;
+    margin: 0 7px;
+    margin-top: 10px;
+}
+
+.product-info{
+    padding-left: 30px;
+}
+
+.small-text{
+    line-height: 5px;
 }
 
 .product-name {
