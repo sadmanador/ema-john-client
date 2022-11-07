@@ -49,6 +49,9 @@
     justify-content: center;
     align-items: center;
 }
+.add-to-cart:hover{
+    background-color: orange;
+}
 
 .add-to-cart p{
     margin-right: 10px;
