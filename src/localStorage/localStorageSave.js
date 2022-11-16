@@ -2,7 +2,7 @@ const addToLocalStorage = id => {
     //make a object is which the data will be stored
     let shoppingCart = {}; 
 
-    //check weather a name of value data is stored/not
+    //insert the stored local data in a variable
     const storedData = localStorage.getItem('shopping-cart');
     
     //if the storedData exist, parse the data make it usable.
@@ -11,9 +11,11 @@ const addToLocalStorage = id => {
         shoppingCart = JSON.parse(storedData);
     }
     
-    //if the id(property) is already present, then into that ID 1 is added
+    //set the id parameter in the object property
     const quantity = shoppingCart[id];
+    //checking weather the object with the set property exist or not
     if(quantity){
+        //if the property exits the property value is increase by 1
         const newQuantity = quantity + 1;
         shoppingCart[id] = newQuantity;
     }
