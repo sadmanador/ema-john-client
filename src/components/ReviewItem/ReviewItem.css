@@ -1,0 +1,43 @@
+.order-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em;
+    width: 70%;
+    background-color: rgba(154, 150, 150, 0.073);
+    border: 1px solid #95A0A7;
+    border-radius: 0.5em;
+    margin: 1.31em auto;
+
+}
+
+.order-details{
+    display: flex;
+}
+
+.order-card img{
+    width: 20%;
+}
+
+.order-card-info{
+    margin-left: 2em;
+}
+
+.remove-product-btn{
+    font-size: 3em;
+    color: rgb(252, 77, 77);
+    padding: 0.8em 1em;
+    background-color: rgb(255, 164, 164);
+    border-radius: 50%;
+    transition: color .5s, background-color .5s, padding .5s;
+}
+
+.remove-product-btn:hover{
+    color: rgb(255, 21, 21);
+    background-color: rgb(255, 129, 129);
+    padding: 0.65em .8em;
+}
+
+.high-lighted{
+    color: rgb(244, 208, 0);
+}

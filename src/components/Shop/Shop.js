@@ -6,16 +6,15 @@ import Summary from '../Summary/Summary';
 import './Shop.css'
 
 const Shop = () => {
-    const products = useLoaderData();
+    const { products } = useLoaderData();
     const [cart, setCart] = useState([]);
 
-    
+
 
     //getting localStored data.
     useEffect(() => {
         const storedCard = getStoredCard();
         //loop through object property
-
         const savedCard = [];
         for (const id in storedCard) {
             const addedProduct = products.find(product => product.id === id);
@@ -27,6 +26,7 @@ const Shop = () => {
         }
         setCart(savedCard);
     }, [products]);
+
 
     const handleAddToCart = selectedProduct => {
         let newCart = [];
