@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { addToLocalStorage, getStoredCard } from '../../localStorage/localStorageSave';
 import Product from '../Product/Product';
 import Summary from '../Summary/Summary';
 import './Shop.css'
@@ -13,9 +14,15 @@ const Shop = () => {
             .then(data => setProducts(data))
     }, [])
 
- const handleAddToCart = product => {
+    useEffect(() => {
+        const storedCard = getStoredCard();
+        console.log(storedCard)
+    }, [products])
+
+    const handleAddToCart = product => {
         const newCart = [...cart, product];
         setCart(newCart);
+        addToLocalStorage(product.id);
     }
 
 
@@ -26,14 +33,14 @@ const Shop = () => {
                     products.map(product => <Product
                         key={product.id}
                         product={product}
-                       handleAddToCart={handleAddToCart}
+                        handleAddToCart={handleAddToCart}
                     ></Product>)
                 }
             </div>
 
             <div className="product-summary">
                 <Summary
-                cart={cart}
+                    cart={cart}
                 ></Summary>
             </div>
         </div>
