@@ -31,10 +31,21 @@ const Shop = () => {
         setCart(savedCard);
     }, [products]);
 
-    const handleAddToCart = product => {
-        const newCart = [...cart, product];
+    const handleAddToCart = selectedProduct => {
+        let newCart = [];
+        const exists = cart.find(product => product.id === selectedProduct.id);
+        if (!exists) {
+            selectedProduct.quantity = 1;
+            newCart = [...cart, selectedProduct];
+        }
+        else {
+            const rest = cart.filter(product => product.id !== selectedProduct.id)
+            exists.quantity = exists.quantity + 1;
+            newCart = [...rest, exists]
+        }
+
         setCart(newCart);
-        addToLocalStorage(product.id);
+        addToLocalStorage(selectedProduct.id);
     }
 
 
