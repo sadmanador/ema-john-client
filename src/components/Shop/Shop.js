@@ -1,18 +1,15 @@
 import React, { useEffect, useState } from 'react';
+import { useLoaderData } from 'react-router-dom';
 import { addToLocalStorage, getStoredCard } from '../../localStorage/localStorageSave';
 import Product from '../Product/Product';
 import Summary from '../Summary/Summary';
 import './Shop.css'
 
 const Shop = () => {
-    const [products, setProducts] = useState([]);
+    const products = useLoaderData();
     const [cart, setCart] = useState([]);
 
-    useEffect(() => {
-        fetch('products.json')
-            .then(res => res.json())
-            .then(data => setProducts(data))
-    }, [])
+    
 
     //getting localStored data.
     useEffect(() => {
