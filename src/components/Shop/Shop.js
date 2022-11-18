@@ -6,7 +6,7 @@ import './Shop.css'
 
 const Shop = () => {
     const [products, setProducts] = useState([]);
-    const [cart, setCart] = useState([])
+    const [cart, setCart] = useState([]);
 
     useEffect(() => {
         fetch('products.json')
@@ -14,10 +14,22 @@ const Shop = () => {
             .then(data => setProducts(data))
     }, [])
 
+    //getting localStored data.
     useEffect(() => {
         const storedCard = getStoredCard();
-        console.log(storedCard)
-    }, [products])
+        //loop through object property
+
+        const savedCard = [];
+        for (const id in storedCard) {
+            const addedProduct = products.find(product => product.id === id);
+            if (addedProduct) {
+                const quantity = storedCard[id]
+                addedProduct.quantity = quantity;
+                savedCard.push(addedProduct);
+            }
+        }
+        setCart(savedCard);
+    }, [products]);
 
     const handleAddToCart = product => {
         const newCart = [...cart, product];

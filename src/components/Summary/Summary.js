@@ -11,6 +11,7 @@ let shipping = 0;
 
     const tax = total * 0.1;
     const grandTotal = total + shipping + +tax
+    
     return (
         <div className='summary-container'>
             <h3>From summary: {cart.length}</h3>
