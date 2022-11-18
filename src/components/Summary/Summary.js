@@ -20,7 +20,7 @@ const Summary = ({ cart }) => {
             <p>Total price: ${total}</p>
             <p>Tax (10%): ${tax.toFixed(2)}</p>
             <p>Shipping Charges: ${shipping}</p>
-            <h5>Grand total: {grandTotal.toFixed(2)}</h5>
+            <h5>Grand total: ${grandTotal.toFixed(2)}</h5>
         </div>
     );
 };
