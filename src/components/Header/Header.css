@@ -7,18 +7,23 @@
     padding: 0 150px;
 }
 
+.active__link {
+    background-color: blueviolet;
+    font-weight: 800;
+    padding: 10px 16px;
+    border-radius: 6px;
+    color: #1C2B35 !important;
+    font-size: 1.2em !important;
+    text-decoration: underline !important;
+    text-decoration-color: white !important;
+}
+
 .menu a {
     text-decoration: none;
     color: white;
     margin-left: 32px;
     font-family: 'Lato';
     font-style: normal;
-    font-weight: 400;
-    font-size: 17px;
+    font-size: 1em;
 }
 
-.active__link, .active__link a{
-    background-color: blueviolet;
-    text-decoration: underline;
-    text-decoration-color: brown;
-}
