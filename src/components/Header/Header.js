@@ -8,10 +8,10 @@ const Header = () => {
         <nav className='header'>
             <img src={logo} alt="" />
             <div className="menu">
-                <NavLink className={({ isActive }) => isActive ? 'active' : undefined} to="/">Shop</NavLink>
-                <NavLink className={({ isActive }) => isActive ? 'active' : undefined} to="/orders">Order</NavLink>
-                <NavLink className={({ isActive }) => isActive ? 'active' : undefined} to="/inventory">Inventory</NavLink>
-                <NavLink className={({ isActive }) => isActive ? 'active' : undefined} to="/about">About</NavLink>
+                <NavLink className={({isActive})=>isActive ? 'active__link' : undefined} to="/">Shop</NavLink>
+                <NavLink className={({isActive})=>isActive ? 'active__link' : undefined} to="/orders">Order</NavLink>
+                <NavLink className={({isActive})=>isActive ? 'active__link' : undefined} to="/inventory">Inventory</NavLink>
+                <NavLink className={({isActive})=>isActive ? 'active__link' : undefined} to="/about">About</NavLink>
             </div>
         </nav>
     );
