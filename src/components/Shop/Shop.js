@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
-import { addToLocalStorage, getStoredCard } from '../../localStorage/localStorageSave';
+import { Link, useLoaderData } from 'react-router-dom';
+import { addToLocalStorage, deleteShoppingCart, getStoredCard } from '../../localStorage/localStorageSave';
 import Product from '../Product/Product';
 import Summary from '../Summary/Summary';
 import './Shop.css'
@@ -45,6 +45,12 @@ const Shop = () => {
         addToLocalStorage(selectedProduct.id);
     }
 
+    //clear cart
+    const clearCart = () => {
+        setCart([]);
+        deleteShoppingCart();
+    }
+
 
     return (
         <div className='shop'>
@@ -61,7 +67,12 @@ const Shop = () => {
             <div className="product-summary">
                 <Summary
                     cart={cart}
-                ></Summary>
+                    clearCart={clearCart}
+                >
+                    <Link to='/orders'>
+                        <button className='remove-all-items'>Review Orders</button>
+                    </Link>
+                </Summary>
             </div>
         </div>
     );

@@ -7,19 +7,7 @@
     padding: 0 150px;
 }
 
-.active__link {
-    background-color: blueviolet;
-    font-weight: 800;
-    padding: 10px 16px;
-    border-radius: 6px;
-    color: #1C2B35 !important;
-    font-size: 1.2em !important;
-    text-decoration: underline !important;
-    text-decoration-color: white !important;
-    text-decoration-thickness: 3px !important;
-}
-
-.menu a {
+nav a {
     text-decoration: none;
     color: white;
     margin-left: 32px;
@@ -28,3 +16,14 @@
     font-size: 1em;
 }
 
+.active__link {
+    background-color: blueviolet;
+    font-weight: 800;
+    padding: 10px 16px;
+    border-radius: 6px;
+    color: #1C2B35;
+    font-size: 1.2em;
+    text-decoration: underline;
+    text-decoration-color: white;
+    text-decoration-thickness: 3px;
+}

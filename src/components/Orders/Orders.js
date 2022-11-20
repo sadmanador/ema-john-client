@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
-import { removeFromDb } from '../../localStorage/localStorageSave';
+import { Link, useLoaderData } from 'react-router-dom';
+import { deleteShoppingCart, removeFromDb } from '../../localStorage/localStorageSave';
 
 import ReviewItem from '../ReviewItem/ReviewItem';
 import Summary from '../Summary/Summary';
@@ -14,6 +14,13 @@ const Orders = () => {
         setCart(remaining);
         removeFromDb(id)
     }
+
+    //clear cart
+    const clearCart = () => {
+        setCart([]);
+        deleteShoppingCart();
+    }
+
     return (
         <div className='shop'>
             <div className='orders-container'>
@@ -24,9 +31,15 @@ const Orders = () => {
             handleRemoveProduct={handleRemoveProduct}
             ></ReviewItem>)
         }
+        {
+            cart.length === 0 && <h2>Please add some Products from <Link to='/'>Shop</Link></h2>
+        }
             </div>
             <div className='product-summary'>
-                <Summary cart={cart}></Summary>
+                <Summary
+                cart={cart}
+                clearCart={clearCart}
+                ></Summary>
             </div>
         </div>
     );
