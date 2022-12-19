@@ -2,6 +2,7 @@
     padding-left: 2rem;
     position: sticky;
     top: 0;
+    height: 100vh;
 }
 
 .remove-all-items{
@@ -11,6 +12,7 @@
     background-color: rgb(255, 0, 68);
     border-radius: .5em;
     border: none;
+    margin-right: 10px;
 }
 
 .remove-all-items span{
