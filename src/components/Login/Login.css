@@ -13,7 +13,7 @@ button {
     max-width: 31.25rem;
     border: 1px solid black;
     border-radius: .5rem;
-    box-shadow:  -0.5rem -0.5rem rgba(255, 153, 0, 0.3);
+    box-shadow:  -0.55rem -0.65rem rgba(255, 153, 0, 0.3);
 }
 
 .credential-form h2 {
