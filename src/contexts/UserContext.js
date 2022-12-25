@@ -8,8 +8,8 @@ const auth = getAuth(app);
 export const AuthContext = createContext();
 
 const UserContext = ({children}) => {
-    const [user, setUser] = useState(null)
-    const authInfo = {};
+    const [user, setUser] = useState('Rakesh')
+    const authInfo = {user};
 
     return (
         <AuthContext.Provider value={authInfo}>
