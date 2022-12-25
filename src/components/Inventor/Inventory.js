@@ -6,7 +6,7 @@ const Inventory = () => {
     return (
         <div>
             <h1>This is inventory components</h1>
-            <p>{user}</p>
+            <h2>{user}</h2>
         </div>
     );
 };
