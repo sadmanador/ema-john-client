@@ -13,14 +13,36 @@ import PrivateRoute from "./PrivateRoute";
 export const router = createBrowserRouter([
   {
     path: '/', element: <Main></Main>, children: [
-      { path: '/', element: <Shop></Shop>, loader: productAndCartLoader},
-      { path: '/orders', element: <Orders></Orders>, loader: productAndCartLoader},
-      { path: '/inventory', element: <Inventory></Inventory> },
-      { path: '/signup', element: <Signup></Signup> },
-      { path: '/login', element: <Login></Login> },
-      {path: '/shipping',
-      element: <PrivateRoute><Shipping></Shipping></PrivateRoute>},
-      { path: '/about', element: <About></About> }
+      {
+        path: '/',
+        element: <Shop></Shop>,
+        loader: productAndCartLoader
+      },
+      {
+        path: '/orders',
+        element: <Orders></Orders>,
+        loader: productAndCartLoader
+      },
+      {
+        path: '/inventory',
+        element: <PrivateRoute><Inventory></Inventory></PrivateRoute>
+      },
+      {
+        path: '/signup',
+        element: <Signup></Signup>
+      },
+      {
+        path: '/login',
+        element: <Login></Login>
+      },
+      {
+        path: '/shipping',
+        element: <PrivateRoute><Shipping></Shipping></PrivateRoute>
+      },
+      {
+        path: '/about',
+        element: <About></About>
+      }
     ]
   }
 ])

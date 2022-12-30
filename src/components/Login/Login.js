@@ -18,9 +18,6 @@ const Login = () => {
         const email = form.email.value;
         const password = form.password.value;
 
-
-        console.log(email, password);
-
         loginUser(email, password)
             .then(result => {
                 setUser(result.user);
@@ -42,6 +39,7 @@ const Login = () => {
                     <button type='submit'>Login</button>
                 </form>
                 <p>New to Ema-john? <Link to='/signup'>Create New Account</Link></p>
+                <p>{error}</p>
             </div>
         </div>
     );
