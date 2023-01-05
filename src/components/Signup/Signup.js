@@ -5,7 +5,7 @@ import { AuthContext } from '../../contexts/UserContext';
 
 const Signup = () => {
     const [ error, setError ] = useState(null)
-    const { user, setUser, createUser } = useContext(AuthContext);
+    const { setUser, createUser } = useContext(AuthContext);
 
     const handleSignup = (event) => {
         event.preventDefault();
@@ -46,7 +46,7 @@ const Signup = () => {
                 </form>
                 <p>Already have an account? <Link to='/login'>Login</Link></p>
                 {
-                    error && <p>{error}</p>
+                 <p>{error}</p>
                 }
             </div>
         </div>

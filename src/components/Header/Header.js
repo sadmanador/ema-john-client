@@ -12,7 +12,10 @@ const Header = () => {
     const handleLogOut = () => {
         logOut()
             .then(() => { })
-            .catch(error => setError(error))
+            .catch(error => {
+                setError(error)
+                prompt({error})
+            })
     }
 
     return (
@@ -22,13 +25,13 @@ const Header = () => {
                 <NavLink className={({ isActive }) => isActive ? 'active__link' : undefined} to="/">Shop</NavLink>
                 <NavLink className={({ isActive }) => isActive ? 'active__link' : undefined} to="/orders">Order</NavLink>
                 <NavLink className={({ isActive }) => isActive ? 'active__link' : undefined} to="/inventory">Inventory</NavLink>
-                
+
                 {
                     !user?.uid
                     &&
                     <>
-                    <NavLink className={({ isActive }) => isActive ? 'active__link' : undefined} to="/signup">Signup</NavLink>
-                    <NavLink className={({ isActive }) => isActive ? 'active__link' : undefined} to="/login">Login</NavLink>
+                        <NavLink className={({ isActive }) => isActive ? 'active__link' : undefined} to="/signup">Signup</NavLink>
+                        <NavLink className={({ isActive }) => isActive ? 'active__link' : undefined} to="/login">Login</NavLink>
                     </>
                 }
                 <NavLink className={({ isActive }) => isActive ? 'active__link' : undefined} to="/about">About</NavLink>
