@@ -9,20 +9,23 @@
 .nav-menu a {
     text-decoration: none;
     color: white;
-    margin-left: 32px;
+    margin-left: 1em;
     font-family: 'Lato';
     font-style: normal;
     font-size: 1rem;
 }
 
+.logo{
+    width: 7em;
+}
+
 .active__link {
     background-color: blueviolet;
     font-weight: 800;
-    padding: 10px 16px;
-    border-radius: 6px;
+    padding: .6em 1em;
+    border-radius: .4em;
     color: #1C2B35;
     font-size: 1.2rem;
-    text-decoration-thickness: 3px;
 }
 
 .credential-form form>label,
@@ -92,7 +95,7 @@ button {
 .product-card {
     position: relative;
     height: 520px;
-    width: 300px;
+    max-width: 300px;
     border: 1px solid #95A0A7;
     border-radius: 8px;
 }
@@ -208,12 +211,11 @@ button {
 .shop {
     display: grid;
     grid-template-columns: 1fr 1fr;
-
 }
 
 .product-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     justify-content: space-between;
     padding: 3em;
     gap: 1.5rem;
@@ -231,7 +233,11 @@ button {
     height: 100vh;
 }
 
-.remove-all-items {
+.btn-group{
+    display: flex;
+}
+
+.remove-all-items, .proceed-btn {
     font-size: 1rem;
     font-weight: 700;
     padding: 1em 1.5em;
@@ -246,7 +252,8 @@ button {
     padding-right: 10px;
 }
 
-.remove-all-items:hover {
+.remove-all-items:hover,
+ .proceed-btn:hover{
     background-color: orangered;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -256,7 +263,7 @@ button {
 }
 
 
-@media (min-width: 555px) {
+@media (min-width: 600px) {
     .shop {
         grid-template-columns: 5fr 1fr;
     }

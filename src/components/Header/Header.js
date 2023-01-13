@@ -19,7 +19,7 @@ const Header = () => {
 
     return (
         <header className='header'>
-            <nav><Link to='/'><img src={logo} alt="" /></Link></nav>
+            <nav><Link to='/'><img className='logo' src={logo} alt="" /></Link></nav>
             <nav className="nav-menu">
                 <NavLink className={({ isActive }) => isActive ? 'active__link' : undefined} to="/">Shop</NavLink>
                 <NavLink className={({ isActive }) => isActive ? 'active__link' : undefined} to="/orders">Order</NavLink>
