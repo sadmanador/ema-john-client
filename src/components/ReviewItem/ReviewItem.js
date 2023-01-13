@@ -1,7 +1,6 @@
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import './ReviewItem.css'
 
 const ReviewItem = ({ product, handleRemoveProduct }) => {
     const { id, name, price, quantity, shipping, img } = product;

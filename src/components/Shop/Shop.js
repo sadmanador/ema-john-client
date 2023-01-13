@@ -3,7 +3,6 @@ import { Link, useLoaderData } from 'react-router-dom';
 import { addToLocalStorage, deleteShoppingCart, getStoredCard } from '../../localStorage/localStorageSave';
 import Product from '../Product/Product';
 import Summary from '../Summary/Summary';
-import './Shop.css'
 
 const Shop = () => {
     const { products } = useLoaderData();
@@ -63,7 +62,6 @@ const Shop = () => {
                     ></Product>)
                 }
             </div>
-
             <div className="product-summary">
                 <Summary
                     cart={cart}
@@ -74,6 +72,7 @@ const Shop = () => {
                     </Link>
                 </Summary>
             </div>
+
         </div>
     );
 };

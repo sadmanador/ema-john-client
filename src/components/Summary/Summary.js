@@ -1,7 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping, faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
-import './Summary.css'
 
 const Summary = ({ cart , clearCart, children }) => {
     let total = 0;

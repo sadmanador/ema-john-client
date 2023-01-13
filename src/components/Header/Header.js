@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import logo from '../../images/Logo.svg'
 import { Link, NavLink } from 'react-router-dom';
-import './Header.css'
 import { useContext } from 'react';
 import { AuthContext } from '../../contexts/UserContext';
 
@@ -20,8 +19,8 @@ const Header = () => {
 
     return (
         <header className='header'>
-            <Link to='/'><img src={logo} alt="" /></Link>
-            <nav className="menu">
+            <nav><Link to='/'><img src={logo} alt="" /></Link></nav>
+            <nav className="nav-menu">
                 <NavLink className={({ isActive }) => isActive ? 'active__link' : undefined} to="/">Shop</NavLink>
                 <NavLink className={({ isActive }) => isActive ? 'active__link' : undefined} to="/orders">Order</NavLink>
                 <NavLink className={({ isActive }) => isActive ? 'active__link' : undefined} to="/inventory">Inventory</NavLink>
