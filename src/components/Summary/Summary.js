@@ -1,5 +1,5 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartShopping, faTrashCan } from '@fortawesome/free-solid-svg-icons';
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import React from 'react';
 
 const Summary = ({ cart, clearCart, children }) => {
@@ -19,7 +19,7 @@ const Summary = ({ cart, clearCart, children }) => {
         <div className='summary-container'>
             <h3>Order summary: {quantity}</h3>
             <div className="cart-number">
-                <FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon>
+                <ShoppingCartIcon/>
                 <p>{quantity}</p>
             </div>
 
@@ -30,7 +30,7 @@ const Summary = ({ cart, clearCart, children }) => {
             <div className='btn-group'>
                 <button className='remove-all-items' onClick={clearCart}>
                     <span>Clear Cart</span>
-                    <FontAwesomeIcon icon={faTrashCan}></FontAwesomeIcon>
+                    <DeleteForeverIcon/>
                 </button>
                 <div>{children}</div>
             </div>

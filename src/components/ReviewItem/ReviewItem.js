@@ -1,6 +1,5 @@
-import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 
 const ReviewItem = ({ product, handleRemoveProduct }) => {
     const { id, name, price, quantity, shipping, img } = product;
@@ -16,7 +15,7 @@ const ReviewItem = ({ product, handleRemoveProduct }) => {
                 </div>
             </div>
             <div className='remove-product-btn' onClick={() => handleRemoveProduct(id)}>
-                <FontAwesomeIcon icon={faTrashCan} />
+                <DeleteOutlineIcon/>
             </div>
         </div>
     );
