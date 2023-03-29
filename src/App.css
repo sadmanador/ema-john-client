@@ -245,17 +245,22 @@ button {
     border-radius: .5em;
     border: none;
     margin-right: 10px;
-    text-decoration: none;
 }
 
 .remove-all-items span {
     padding-right: 10px;
+    text-decoration: none;
 }
+
 
 .remove-all-items:hover,
  .proceed-btn:hover{
     background-color: orangered;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.review-link{
+    text-decoration: none;
 }
 
 .cart-number {

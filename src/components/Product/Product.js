@@ -5,11 +5,14 @@ import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
 const Product = ({ product, handleAddToCart }) => {
 
-    const { name, price, seller, ratings, img, id } = product;
+    const { name, price, seller, ratings, img } = product;
     
     return (
         <div className='product-card'>
-            <img src={img} alt={name} className='product-img' />
+            <img 
+            src={
+                img
+                } alt={name} className='product-img' />
             <div className="product-info">
                 <p className='product-name'>{name}</p>
                 <p className='product-price'>Price: ${price}</p>
