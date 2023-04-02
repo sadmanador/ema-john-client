@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import {
-  addToLocalStorage,
-  deleteShoppingCart,
-  getStoredCard,
+    addToLocalStorage,
+    deleteShoppingCart,
+    getStoredCard
 } from "../../localStorage/localStorageSave";
 import Product from "../Product/Product";
 import Summary from "../Summary/Summary";

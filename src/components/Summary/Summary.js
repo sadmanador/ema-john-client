@@ -1,7 +1,6 @@
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import React from "react";
-import { Link } from "react-router-dom";
 
 const Summary = ({ cart, clearCart, children}) => {
   let total = 0;
@@ -21,7 +20,7 @@ const Summary = ({ cart, clearCart, children}) => {
       <h3>Order summary: {quantity}</h3>
       <div className="cart-number">
         <ShoppingCartIcon />
-        <p>{quantity}</p>
+        <p>Number of Items: {quantity}</p>
       </div>
 
       <p>Total price: ${total}</p>
